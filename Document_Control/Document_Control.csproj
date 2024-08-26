@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C540517-2C65-4F02-9536-E001B49970E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Document_Control</RootNamespace>
+    <AssemblyName>Document_Control</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.1.UI, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v22.1.UI, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.1.Wizard, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\Constaint.cs" />
+    <Compile Include="DB\DBUtils.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="FORM\ADMIN\FRM_ACCOUNT_LIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_ACCOUNT_LIST.Designer.cs">
+      <DependentUpon>FRM_ACCOUNT_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_ADD_ACCESS_MANGER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_ADD_ACCESS_MANGER.Designer.cs">
+      <DependentUpon>FRM_ADD_ACCESS_MANGER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_ADD_ACCOUNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_ADD_ACCOUNT.Designer.cs">
+      <DependentUpon>FRM_ADD_ACCOUNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_CHANGE_PASSWORD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_CHANGE_PASSWORD.Designer.cs">
+      <DependentUpon>FRM_CHANGE_PASSWORD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_UPDATE_ACCOUNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_UPDATE_ACCOUNT.Designer.cs">
+      <DependentUpon>FRM_UPDATE_ACCOUNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\DEPLOYMENT\FRM_APPROVED_DEPLOYMENT_CONTENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\DEPLOYMENT\FRM_APPROVED_DEPLOYMENT_CONTENT.Designer.cs">
+      <DependentUpon>FRM_APPROVED_DEPLOYMENT_CONTENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_LOGIN.Designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_MAIN.Designer.cs">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_USER_CHANGE_PASSWORD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_USER_CHANGE_PASSWORD.Designer.cs">
+      <DependentUpon>FRM_USER_CHANGE_PASSWORD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_ADD_DOCUMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_ADD_DOCUMENT.Designer.cs">
+      <DependentUpon>FRM_ADD_DOCUMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\DEPLOYMENT\FRM_DEPLOYMENT_RESULT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\DEPLOYMENT\FRM_DEPLOYMENT_RESULT.Designer.cs">
+      <DependentUpon>FRM_DEPLOYMENT_RESULT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\DEPLOYMENT\FRM_DEPLOYMENT_STATUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\DEPLOYMENT\FRM_DEPLOYMENT_STATUS.Designer.cs">
+      <DependentUpon>FRM_DEPLOYMENT_STATUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DEPLOYMENT_CONTENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DEPLOYMENT_CONTENT.Designer.cs">
+      <DependentUpon>FRM_DEPLOYMENT_CONTENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DEPLOYMENT_CONTENT_SECTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DEPLOYMENT_CONTENT_SECTION.Designer.cs">
+      <DependentUpon>FRM_DEPLOYMENT_CONTENT_SECTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DOCUMENT_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DOCUMENT_FORM.Designer.cs">
+      <DependentUpon>FRM_DOCUMENT_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DOCUMENT_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DOCUMENT_MST.Designer.cs">
+      <DependentUpon>FRM_DOCUMENT_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DOCUMENT_REV_HISTORY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DOCUMENT_REV_HISTORY.Designer.cs">
+      <DependentUpon>FRM_DOCUMENT_REV_HISTORY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_LIST_DOCUMENT_NEED_DEPLOYMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_LIST_DOCUMENT_NEED_DEPLOYMENT.Designer.cs">
+      <DependentUpon>FRM_LIST_DOCUMENT_NEED_DEPLOYMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_LIST_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_LIST_FORM.Designer.cs">
+      <DependentUpon>FRM_LIST_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_REVISE_DOCUMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_REVISE_DOCUMENT.Designer.cs">
+      <DependentUpon>FRM_REVISE_DOCUMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_SELECT_SECTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_SELECT_SECTION.Designer.cs">
+      <DependentUpon>FRM_SELECT_SECTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_UPDATE_DOCUMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\RELEASE_OF_DOCUMENTS\FRM_UPDATE_DOCUMENT.Designer.cs">
+      <DependentUpon>FRM_UPDATE_DOCUMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORM\ADMIN\FRM_ACCOUNT_LIST.resx">
+      <DependentUpon>FRM_ACCOUNT_LIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ADMIN\FRM_ADD_ACCESS_MANGER.resx">
+      <DependentUpon>FRM_ADD_ACCESS_MANGER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ADMIN\FRM_ADD_ACCOUNT.resx">
+      <DependentUpon>FRM_ADD_ACCOUNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ADMIN\FRM_CHANGE_PASSWORD.resx">
+      <DependentUpon>FRM_CHANGE_PASSWORD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ADMIN\FRM_UPDATE_ACCOUNT.resx">
+      <DependentUpon>FRM_UPDATE_ACCOUNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\DEPLOYMENT\FRM_APPROVED_DEPLOYMENT_CONTENT.resx">
+      <DependentUpon>FRM_APPROVED_DEPLOYMENT_CONTENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_USER_CHANGE_PASSWORD.resx">
+      <DependentUpon>FRM_USER_CHANGE_PASSWORD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_ADD_DOCUMENT.resx">
+      <DependentUpon>FRM_ADD_DOCUMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\DEPLOYMENT\FRM_DEPLOYMENT_RESULT.resx">
+      <DependentUpon>FRM_DEPLOYMENT_RESULT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\DEPLOYMENT\FRM_DEPLOYMENT_STATUS.resx">
+      <DependentUpon>FRM_DEPLOYMENT_STATUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DEPLOYMENT_CONTENT.resx">
+      <DependentUpon>FRM_DEPLOYMENT_CONTENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DEPLOYMENT_CONTENT_SECTION.resx">
+      <DependentUpon>FRM_DEPLOYMENT_CONTENT_SECTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DOCUMENT_FORM.resx">
+      <DependentUpon>FRM_DOCUMENT_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DOCUMENT_MST.resx">
+      <DependentUpon>FRM_DOCUMENT_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_DOCUMENT_REV_HISTORY.resx">
+      <DependentUpon>FRM_DOCUMENT_REV_HISTORY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_LIST_DOCUMENT_NEED_DEPLOYMENT.resx">
+      <DependentUpon>FRM_LIST_DOCUMENT_NEED_DEPLOYMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_LIST_FORM.resx">
+      <DependentUpon>FRM_LIST_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_REVISE_DOCUMENT.resx">
+      <DependentUpon>FRM_REVISE_DOCUMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_SELECT_SECTION.resx">
+      <DependentUpon>FRM_SELECT_SECTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\RELEASE_OF_DOCUMENTS\FRM_UPDATE_DOCUMENT.resx">
+      <DependentUpon>FRM_UPDATE_DOCUMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BO_User_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AssignTo_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action_ResetPassword_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action_Close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_document_file_1512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserGroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action_LinkUnlink_Link_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BO_Role_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action_Close.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
